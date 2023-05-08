@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap"); /* GENERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+a.btn-type1 {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* CLASSES */
+.hide-on-screen-sm {
+  display: none;
+}
+
+.send-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.rounded, .btn-type1 {
+  border-radius: 15px;
+}
+
+.btn-type1 {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  font-weight: bold;
+}
+
+/* /CLASSES */
+/* /GENERAL */
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header ul .nav-main-submenu {
+  display: none;
+}
+header + * {
+  margin-top: 65px;
+}
+header #btn-menu {
+  background: url(../../images/icon-menu.svg) no-repeat;
+  background-color: transparent;
+  right: 20px;
+  border: none;
+  width: 32px;
+  height: 18px;
+}
+
+/* /HEADER */
+/* FOOTER */
+footer {
+  text-align: center;
+}
+
+/* /FOOTER */
+#main-home-page {
+  text-align: center;
+}
+#main-home-page div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#main-home-page div p {
+  color: hsl(0, 0%, 41%);
+}
+
+/*# sourceMappingURL=style.css.map */

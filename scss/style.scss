@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+$desktop-size: 1440px;
+
+$color1: hsl(0, 0%, 98%);
+$color2: hsl(0, 0%, 41%);
+$color3: hsl(0, 0%, 8%);
+
+@mixin set-flex-container($direction, $gap: initial, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+@mixin set-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin set-colors($background, $color) {
+    background-color: $background;
+    color: $color;
+}
+
+@import './partials/structure';
+@import './partials/index'
