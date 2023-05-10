@@ -1,12 +1,14 @@
 #main-home {
-    text-align: center;
-    div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    div:first-of-type {
         @include set-flex-container(column, 20px);
         p {
             color: $color2;
         }
     }
-    img:nth-of-type(2) {
-        display: none;
+    div:nth-of-type(2) {
+        @include set-flex-container(row)
     }
 }

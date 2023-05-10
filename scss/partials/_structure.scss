@@ -1,142 +1,149 @@
 /* GENERAL */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html, body {
-    height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: 'Epilogue', sans-serif;
+  background-color: $color1;
+}
+body {
+  font-family: "Epilogue", sans-serif;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
 button {
-    padding: 10px 0;
-    &:hover {
-        cursor: pointer;
-    }
+  padding: 10px 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 a {
-    text-decoration: none;
-    &.btn-type1 {
-        padding: 20px;
-    }
-    color: $color2;
+  text-decoration: none;
+  &.btn-type1 {
+    padding: 20px;
+  }
+  color: $color2;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 /* CLASSES */
 .send-bottom {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .rounded {
-    border-radius: 15px
+  border-radius: 15px;
 }
 .btn-type1 {
-    @include set-colors($color3, $color1);
-    font-weight: bold;
-    @extend .rounded;
+  @include set-colors($color3, $color1);
+  font-weight: bold;
+  @extend .rounded;
+  &:hover {
+    @include set-colors($color1, $color3);
+    border: 1px solid $color2;
+  }
 }
 .btn-type2 {
-    @include set-colors($color1, $color2);
-    border: 2px solid $color2;
-    @extend .rounded;
+  @include set-colors($color1, $color2);
+  border: 2px solid $color2;
+  font-weight: bold;
+  @extend .rounded;
+  &:hover {
+    border-color: black;
+    color: black;
+  }
 }
 .btn-type3 {
-    @include set-colors($color1, $color2);
-    border: none;
-    @extend .rounded;
+  @include set-colors($color1, $color2);
+  border: none;
+  font-weight: bold;
+  &:hover {
+    color: black;
+  }
 }
 /* /CLASSES */
 /* /GENERAL */
 /* HEADER */
 header {
-    @include set-flex-container(row, $justify: space-between);
-    position: fixed;
-    padding: 20px;
+  @include set-flex-container(row, $justify: space-between);
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  width: 100%;
+  & + main, & + section {
+    margin-top: 65px;
+  }
+  &.expand {
+    position: initial;
+  }
+  #header-menu {
+    @include set-size(60%, 100%);
+    @include set-colors($color1, $color2);
+    display: none;
+    position: absolute;
     top: 0;
-    width: 100%;
-    & + * {
-      margin-top: 65px;
-    }
+    right: 0;
+    padding: 30px;
+    z-index: 10;
+    font-size: 18px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
     &.expand {
-        position: initial;
+      @include set-flex-container(column, $justify: flex-start, $align: flex-start);
     }
-    #header-menu {
-        @include set-size(60%, 100%);
-        @include set-colors($color1, $color2);
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 30px;
-        z-index: 10;
-        font-size: 18px;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .8);
-        &.expand {
-            @include set-flex-container(column, $justify: flex-start, $align: flex-start);
-        }
-        .nav-main {
-            margin-top: 50px;
+    nav.nav-main {
+      margin-top: 50px;
+      ul {
+        @include set-flex-container(column, $align: flex-start);
+        li {
+          &:hover {
+            cursor: pointer;
             ul {
-                @include set-flex-container(column, $align: flex-start);
-                li {
-                    &:hover {
-                        cursor: pointer;
-                        ul {
-                            @include set-flex-container(column, $align: flex-start);
-                            margin-top: 10px;
-                            margin-left: 20px;
-                        }
-                        .img-submenu-arrow {
-                            content: url(../../images/icon-arrow-up.svg)
-                        }
-                    }
-                    ul {
-                        display: none;
-                    }
-                }
+              @include set-flex-container(column, $align: flex-start);
+              margin-top: 10px;
+              margin-left: 20px;
             }
-        }
-        .header-menu-login {
-            width: 100%;
-            button {
-                width: 100%;
-                display: block;
-                font-size: inherit;
+            .img-submenu-arrow {
+              content: url(../../images/icon-arrow-up.svg);
             }
+          }
+          ul {
+            display: none;
+          }
         }
+      }
     }
-    #btn-menu {
-        background: url(../../images/icon-menu.svg) no-repeat;
-        background-color: transparent;
-        border: none;
-        z-index: 20;
-        @include set-size(32px, 18px);
-        &.expand {
-            background-image: url(../../images/icon-close-menu.svg);
-            @include set-size(26px, 26px);
-        }
+    .header-menu-login {
+      width: 100%;
+      button {
+        width: 100%;
+        display: block;
+        font-size: inherit;
+      }
     }
+  }
+  #btn-menu {
+    background: url(../../images/icon-menu.svg) no-repeat;
+    background-color: transparent;
+    border: none;
+    z-index: 20;
+    @include set-size(32px, 18px);
+    &.expand {
+      background-image: url(../../images/icon-close-menu.svg);
+      @include set-size(26px, 26px);
+    }
+  }
 }
 /* /HEADER */
 /* FOOTER */
 footer {
-    text-align: center;
+  text-align: center;
+  margin-top: 50px;
 }
 /* /FOOTER */
-
-
-
-
-
-

@@ -1,0 +1,78 @@
+@media (min-width: $large-size) {
+  header {
+    background-color: $color1;
+    justify-content: flex-start;
+    & + main, & + section {
+      margin-top: 100px;
+    }
+    #header-menu {
+      @include set-size(100%, initial);
+      @include set-flex-container(row, $justify: space-between, $align: center);
+      position: static;
+      padding: 0;
+      font-size: 16px;
+      box-shadow: none;
+      nav.nav-main {
+        margin-top: 0;
+        ul {
+          flex-direction: row;
+          li {
+            &:hover {
+              color: black;
+              ul {
+                @include set-flex-container(column, $align: flex-start);
+                background-color: $color1;
+                position: absolute;
+                border-radius: 15px;
+                padding: 30px;
+                margin: 0;
+                box-shadow: 0px 2px 60px -20px rgba(0,0,0,0.75);
+              }
+              .img-submenu-arrow {
+                content: url(../../images/icon-arrow-up.svg);
+              }
+            }
+            ul {
+              display: none;
+            }
+          }
+        }
+      }
+      .header-menu-login {
+        @include set-flex-container(row);
+        width: initial;
+        button {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  #main-home {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 100px;
+    column-gap: 100px;
+    img.img-cover {
+      content: url(../../images/image-hero-desktop.png);
+      grid-column-start: 2;
+      grid-row: 1/3;
+    }
+    div:first-of-type {
+      grid-row-start: 1;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 30px;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: large;
+      }
+    }
+    div:nth-of-type(2) {
+      @include set-flex-container(row, $justify: flex-start, $align: flex-end);
+    }
+  }
+  .hide-on-screen-lg {
+    display: none;
+  }
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
-$desktop-size: 1440px;
+
+$large-size: 800px;
 
 $color1: hsl(0, 0%, 98%);
 $color2: hsl(0, 0%, 41%);
@@ -23,4 +24,5 @@ $color3: hsl(0, 0%, 8%);
 }
 
 @import './partials/structure';
-@import './partials/index'
+@import './partials/index';
+@import './partials/media-queries';
