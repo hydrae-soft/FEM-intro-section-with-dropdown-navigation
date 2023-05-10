@@ -1,9 +1,12 @@
-#main-home-page {
+#main-home {
     text-align: center;
     div {
         @include set-flex-container(column, 20px);
         p {
             color: $color2;
         }
+    }
+    img:nth-of-type(2) {
+        display: none;
     }
 }

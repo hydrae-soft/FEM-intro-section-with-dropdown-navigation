@@ -12,48 +12,53 @@
   <body>
     <header>
       <img src="./images/logo.svg" alt="logo">
-      <nav class="nav-main hide-on-screen-sm">
-        <ul>
-          <li>
-            Features
-            <ul class="nav-main-submenu">
-              <li>Todo List</li>
-              <li>Calendar</li>
-              <li>Reminders</li>
-              <li>Planning</li>
-            </ul>
-          </li>
-          <li>
-            Company
-            <ul class="nav-main-submenu">
-              <li><a href="#">History</a></li>
-              <li><a href="#">Our Team</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-      <section class="header-section-login hide-on-screen-sm">
-        <button>Login</button>
-        <button>Register</button>
-      </section>
       <button id="btn-menu" class="hide-on-screen-lg"></button>
+      <div id="header-menu">
+        <nav class="nav-main">
+          <ul>
+            <li>
+              Features
+              <img src="./images/icon-arrow-down.svg" alt="arrow down">
+              <ul>
+                <li><img src="./images/icon-todo.svg" alt=""><a href="#">Todo List</a></li>
+                <li><img src="./images/icon-calendar.svg" alt=""><a href="#">Calendar</a></li>
+                <li><img src="./images/icon-reminders.svg" alt=""><a href="#">Reminders</a></li>
+                <li><img src="./images/icon-planning.svg" alt=""><a href="#">Planning</a></li>
+              </ul>
+            </li>
+            <li>
+              Company
+              <img src="./images/icon-arrow-down.svg" alt="arrow down">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+        <div class="header-menu-login">
+          <button class="btn-type3">Login</button>
+          <button class="btn-type2">Register</button>
+        </div>
+      </div>
     </header>
-    <main id="main-home-page">
+    <main id="main-home">
       <img src="./images/image-hero-mobile.png" alt="Cover picture.">
       <div>
         <h1>Make remote work</h1>
         <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
         <a href="#" class="btn-type1">Learn more</a>
       </div>
-      <img src="./images/image-hero-desktop.png" class="hide-on-screen-sm" alt="Cover picture.">
+      <img src="./images/image-hero-desktop.png" alt="Cover picture.">
     </main>
     <footer>
       <section class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/hydrae-soft">hydrae-soft</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/hydrae-soft" target="_blank">hydrae-soft</a>.
       </section>
     </footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>

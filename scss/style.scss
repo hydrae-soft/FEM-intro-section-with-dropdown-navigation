@@ -5,12 +5,13 @@ $color1: hsl(0, 0%, 98%);
 $color2: hsl(0, 0%, 41%);
 $color3: hsl(0, 0%, 8%);
 
-@mixin set-flex-container($direction, $gap: initial, $justify: center, $align: center) {
+@mixin set-flex-container($direction, $gap: 20px, $justify: center, $align: center, $grow: unset) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+    flex-grow: $grow;
 }
 @mixin set-size($width, $height) {
     width: $width;
