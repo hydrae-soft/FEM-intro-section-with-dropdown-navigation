@@ -93,7 +93,12 @@ header {
                     &:hover {
                         cursor: pointer;
                         ul {
-                            @include set-flex-container(column, $align: flex-end);
+                            @include set-flex-container(column, $align: flex-start);
+                            margin-top: 10px;
+                            margin-left: 20px;
+                        }
+                        .img-submenu-arrow {
+                            content: url(../../images/icon-arrow-up.svg)
                         }
                     }
                     ul {

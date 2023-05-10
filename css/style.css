@@ -130,9 +130,14 @@ header #header-menu .nav-main ul li:hover ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 20px;
   flex-grow: unset;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+header #header-menu .nav-main ul li:hover .img-submenu-arrow {
+  content: url(../../images/icon-arrow-up.svg);
 }
 header #header-menu .nav-main ul li ul {
   display: none;
