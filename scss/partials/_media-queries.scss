@@ -20,7 +20,7 @@
             &:hover {
               color: black;
               .img-submenu-arrow {
-                content: url(../../images/icon-arrow-up.svg);
+                content: url(../images/icon-arrow-up.svg);
               }
               ul {
                 @include set-flex-container(column, $align: flex-start);
@@ -55,7 +55,7 @@
     padding: 0 100px;
     column-gap: 100px;
     img.img-cover {
-      content: url(../../images/image-hero-desktop.png);
+      content: url(../images/image-hero-desktop.png);
       grid-column-start: 2;
       grid-row: 1/3;
     }

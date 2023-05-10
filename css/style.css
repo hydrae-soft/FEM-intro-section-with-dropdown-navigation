@@ -155,7 +155,7 @@ header #header-menu nav.nav-main ul li:hover ul {
   margin-left: 20px;
 }
 header #header-menu nav.nav-main ul li:hover .img-submenu-arrow {
-  content: url(../../images/icon-arrow-up.svg);
+  content: url(../images/icon-arrow-up.svg);
 }
 header #header-menu nav.nav-main ul li ul {
   display: none;
@@ -169,7 +169,7 @@ header #header-menu .header-menu-login button {
   font-size: inherit;
 }
 header #btn-menu {
-  background: url(../../images/icon-menu.svg) no-repeat;
+  background: url(../images/icon-menu.svg) no-repeat;
   background-color: transparent;
   border: none;
   z-index: 20;
@@ -177,7 +177,7 @@ header #btn-menu {
   height: 18px;
 }
 header #btn-menu.expand {
-  background-image: url(../../images/icon-close-menu.svg);
+  background-image: url(../images/icon-close-menu.svg);
   width: 26px;
   height: 26px;
 }
@@ -247,7 +247,7 @@ footer {
     color: black;
   }
   header #header-menu nav.nav-main ul li:hover .img-submenu-arrow {
-    content: url(../../images/icon-arrow-up.svg);
+    content: url(../images/icon-arrow-up.svg);
   }
   header #header-menu nav.nav-main ul li:hover ul {
     display: flex;
@@ -287,7 +287,7 @@ footer {
     column-gap: 100px;
   }
   #main-home img.img-cover {
-    content: url(../../images/image-hero-desktop.png);
+    content: url(../images/image-hero-desktop.png);
     grid-column-start: 2;
     grid-row: 1/3;
   }

@@ -113,7 +113,7 @@ header {
               margin-left: 20px;
             }
             .img-submenu-arrow {
-              content: url(../../images/icon-arrow-up.svg);
+              content: url(../images/icon-arrow-up.svg);
             }
           }
           ul {
@@ -132,13 +132,13 @@ header {
     }
   }
   #btn-menu {
-    background: url(../../images/icon-menu.svg) no-repeat;
+    background: url(../images/icon-menu.svg) no-repeat;
     background-color: transparent;
     border: none;
     z-index: 20;
     @include set-size(32px, 18px);
     &.expand {
-      background-image: url(../../images/icon-close-menu.svg);
+      background-image: url(../images/icon-close-menu.svg);
       @include set-size(26px, 26px);
     }
   }
